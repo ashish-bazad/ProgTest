@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 import AuthContext from '../AuthContext';
 
 const Navbar = () => {
-  let {isAuthenticated, isSuperuser} = useContext(AuthContext);
+  let {isAuthenticated, isSuperuser, api_path} = useContext(AuthContext);
+  const signout = `${api_path}accounts/logout/`
+  const signin = `${api_path}accounts/google/login/?process=login`
   return (
     <>
       <div className={style.navbar}>
@@ -17,8 +19,8 @@ const Navbar = () => {
           </div>
           <div className={style.navbarContainerRight}>
           {isAuthenticated ?
-          (<a href = "http://127.0.0.1:8000/accounts/logout/">Signout</a>) :
-          (<a href="http://127.0.0.1:8000/accounts/google/login/?process=login">Signin</a>)
+          (<a href = {signout}>Signout</a>) :
+          (<a href={signin}>Signin</a>)
           }
           </div>
         </div>

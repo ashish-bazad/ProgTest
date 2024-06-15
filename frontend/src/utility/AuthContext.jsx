@@ -22,9 +22,11 @@ export const AuthProvider = ({children}) => {
     let csrfToken = getCookie('csrftoken')
     let [isAuthenticated, setIsAuthenticated] = useState(false)
     const shouldCheckAuthentication = useRef(true)
+    const api_path = 'https://csotesting.azurewebsites.net/'
+    // const api_path = `${api_path}'
     let checkAuthentication = async () => {
         try {
-            const response = await fetch('http://127.0.0.1:8000/check-authentication/', {
+            const response = await fetch(`${api_path}check-authentication/`, {
               credentials:'include',
             });
             if (response.ok) {
@@ -45,7 +47,7 @@ export const AuthProvider = ({children}) => {
         }
     },[])
     let add_quiz = async (requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/createQuiz/',{
+        const response = await fetch(`${api_path}api/createQuiz/`,{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -56,7 +58,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let edit_quiz = async(requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/editQuiz/', {
+        const response = await fetch(`${api_path}api/editQuiz/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -69,7 +71,7 @@ export const AuthProvider = ({children}) => {
     let [question_id, setQuestion_id] = useState(null)
     let add_mcq_question = async (requestData) => {
         console.log(requestData)
-        const response = await fetch('http://127.0.0.1:8000/api/addMCQquestion/', {
+        const response = await fetch(`${api_path}api/addMCQquestion/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -84,7 +86,7 @@ export const AuthProvider = ({children}) => {
         }
     }
     let add_mcq_option = async (requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/addMCQoption/', {
+        const response = await fetch(`${api_path}api/addMCQoption/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -96,7 +98,7 @@ export const AuthProvider = ({children}) => {
     }
     let [numerical_question_id, set_numerical_question_id] = useState(null)
     let add_numerical_question = async (requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/addNumericalQuestion/', {
+        const response = await fetch(`${api_path}api/addNumericalQuestion/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -114,7 +116,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let add_numerical_answer = async (requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/addNumericalAnswer/', {
+        const response = await fetch(`${api_path}api/addNumericalAnswer/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,7 +129,7 @@ export const AuthProvider = ({children}) => {
 
     let [allQuiz, setAllQuiz] = useState(null)
     let getAllQuiz = async () => {
-        const response = await fetch('http://127.0.0.1:8000/api/get_quizes/', {
+        const response = await fetch(`${api_path}api/get_quizes/`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -146,7 +148,7 @@ export const AuthProvider = ({children}) => {
     let [quiz_id, set_quiz_id] = useState(null)
     let [questions, set_questions] = useState(null)
     let getQuestions = async () => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_questions/?quiz=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/get_questions/?quiz=${quiz_id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -163,7 +165,7 @@ export const AuthProvider = ({children}) => {
     }
 
     let saveResponses = async (requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/save_responses/', {
+        const response = await fetch(`${api_path}api/save_responses/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -175,7 +177,7 @@ export const AuthProvider = ({children}) => {
     }
     let [quiz, setQuiz] = useState(null)
     let getQuiz = async () => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_quiz/?quiz=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/get_quiz/?quiz=${quiz_id}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -194,7 +196,7 @@ export const AuthProvider = ({children}) => {
         }
     }
     let delnum = async(requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/delnum/', {
+        const response = await fetch(`${api_path}api/delnum/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -205,7 +207,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let delmcq = async(requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/delmcq/', {
+        const response = await fetch(`${api_path}api/delmcq/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -216,7 +218,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let delquiz = async(requestData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/delquiz/', {
+        const response = await fetch(`${api_path}api/delquiz/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -227,7 +229,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let check_attempted = async() => {
-        const response = await fetch(`http://127.0.0.1:8000/api/check_attempted/?id=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/check_attempted/?id=${quiz_id}`, {
             method:'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -241,7 +243,7 @@ export const AuthProvider = ({children}) => {
         }
     }
     let add_coding_question = async(responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/add_coding_question/", {
+        const response = await fetch(`${api_path}api/add_coding_question/`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -252,7 +254,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let editCoding_question = async(responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/edit_coding_question/", {
+        const response = await fetch(`${api_path}api/edit_coding_question/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -263,7 +265,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let del_coding_question = async(responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/del_coding_question/",{
+        const response = await fetch(`${api_path}api/del_coding_question/`,{
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -275,7 +277,7 @@ export const AuthProvider = ({children}) => {
     }
     let [numcoding, setNumcoding] = useState(0)
     let numCod = async() => {
-        const response = await fetch(`http://127.0.0.1:8000/api/numCod/?quiz=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/numCod/?quiz=${quiz_id}`, {
             method:'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -287,7 +289,7 @@ export const AuthProvider = ({children}) => {
         setNumcoding(data[0])
     }
     let compute_result = async () => {
-        const response = await fetch(`http://127.0.0.1:8000/api/compute_result/?quiz=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/compute_result/?quiz=${quiz_id}`, {
             method:'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -297,7 +299,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let run_code = async (responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/run_code/", {
+        const response = await fetch(`${api_path}api/run_code/`, {
           method:'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -310,7 +312,7 @@ export const AuthProvider = ({children}) => {
         return data
       }
     let save_code = async (responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/save_code/", {
+        const response = await fetch(`${api_path}api/save_code/`, {
           method:'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -323,7 +325,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     let run_saved_code = async(responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/run_saved_code/", {
+        const response = await fetch(`${api_path}api/run_saved_code/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -336,7 +338,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     let submit_code_quiz = async(responseData) => {
-        const response = await fetch("http://127.0.0.1:8000/api/submit_code_quiz/", {
+        const response = await fetch(`${api_path}api/submit_code_quiz/`, {
             method:'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -348,7 +350,7 @@ export const AuthProvider = ({children}) => {
     }
     let [isSuperuser, setIsSuperuser] = useState(false)
     let check_superuser = async () => {
-        const response = await fetch("http://127.0.0.1:8000/api/check_superuser/",{
+        const response = await fetch(`${api_path}api/check_superuser/`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -369,7 +371,7 @@ export const AuthProvider = ({children}) => {
         }
     },[isAuthenticated])
     let add_suspicious_activity = async (responseData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/add_suspicious_activity/', {
+        const response = await fetch(`${api_path}api/add_suspicious_activity/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -382,7 +384,7 @@ export const AuthProvider = ({children}) => {
 
     let [roll, setRoll] = useState(false)
     let check_roll = async () => {
-        const response = await fetch("http://127.0.0.1:8000/api/check_roll_number/", {
+        const response = await fetch(`${api_path}api/check_roll_number/`, {
             method:"GET",
             headers: {
                 'Content-Type':'application/json',
@@ -394,7 +396,7 @@ export const AuthProvider = ({children}) => {
         setRoll(data.roll)
     }
     let add_roll = async(responseData) => {
-        const resposne = await fetch("http://127.0.0.1:8000/api/add_roll_number/", {
+        const resposne = await fetch(`${api_path}api/add_roll_number/`, {
             method:"POST",
             headers: {
                 'Content-Type':'application/json',
@@ -414,7 +416,7 @@ export const AuthProvider = ({children}) => {
     },[isAuthenticated])
     const [results, setResults] = useState([]);
     let get_result_all = async() => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_result_all/?quiz=${quiz_id}`, {
+        const response = await fetch(`${api_path}api/get_result_all/?quiz=${quiz_id}`, {
             method:"GET",
             headers:{
                 'Content-Type':'application/json',
@@ -429,7 +431,7 @@ export const AuthProvider = ({children}) => {
 
     let [testCases, setTestCases] = useState(null)
     let get_test_cases = async (responseData) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_test_cases/?question_id=${responseData}`, {
+        const response = await fetch(`${api_path}api/get_test_cases/?question_id=${responseData}`, {
             method:"GET",
             headers: {
                 'Content-Type':'application/json',
@@ -444,7 +446,7 @@ export const AuthProvider = ({children}) => {
     }
     let [codingQuestion, setCodingQuestion] = useState(null)
     let get_coding_question = async(responseData) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_coding_question/?id=${responseData}`,{
+        const response = await fetch(`${api_path}api/get_coding_question/?id=${responseData}`,{
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -459,7 +461,7 @@ export const AuthProvider = ({children}) => {
         }
     }
     let add_test_case = async(responseData) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/add_test_case/`, {
+        const response = await fetch(`${api_path}api/add_test_case/`, {
             method:"POST",
             headers:{
                 'Content-Type':'application/json',
@@ -470,7 +472,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     let delete_test_case = async(responseData) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/delete_test_case/`, {
+        const response = await fetch(`${api_path}api/delete_test_case/`, {
             method:"POST",
             headers:{
                 'Content-Type':'application/json',
@@ -482,7 +484,7 @@ export const AuthProvider = ({children}) => {
     }
     let [suspicious_activity, setSuspicious_activity] = useState(null)
     let get_suspicious_activity = async (qid, rollnumber) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_suspicious_activity/?id=${qid}&roll=${rollnumber}`, {
+        const response = await fetch(`${api_path}api/get_suspicious_activity/?id=${qid}&roll=${rollnumber}`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -503,7 +505,7 @@ export const AuthProvider = ({children}) => {
       };
     
     const get_saved_code = async (id, qid) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_saved_code/?quiz=${id}&question=${qid}`, {
+        const response = await fetch(`${api_path}api/get_saved_code/?quiz=${id}&question=${qid}`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -515,7 +517,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const get_test_case = async (test_case_id) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_test_case/?id=${test_case_id}`, {
+        const response = await fetch(`${api_path}api/get_test_case/?id=${test_case_id}`, {
             method:'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -527,7 +529,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const edit_test_case = async (responseData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/edit_test_case/', {
+        const response = await fetch(`${api_path}api/edit_test_case/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -539,7 +541,7 @@ export const AuthProvider = ({children}) => {
     }
 
     const edit_mcq_question = async (responseData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/edit_mcq_question/', {
+        const response = await fetch(`${api_path}api/edit_mcq_question/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -550,7 +552,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     const edit_numerical_question = async (responseData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/edit_numerical_question/', {
+        const response = await fetch(`${api_path}api/edit_numerical_question/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -561,7 +563,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     const edit_mcq_option = async(responseData) => {
-        const response = await fetch('http://127.0.0.1:8000/api/edit_mcq_option/', {
+        const response = await fetch(`${api_path}api/edit_mcq_option/`, {
             method:'POST',
             headers: {
                 'Content-Type':'application/json',
@@ -572,7 +574,7 @@ export const AuthProvider = ({children}) => {
         })
     }
     const get_mcq_question = async(qid) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_mcq_question/?id=${qid}`, {
+        const response = await fetch(`${api_path}api/get_mcq_question/?id=${qid}`, {
             method:'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -584,7 +586,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const get_numerical_question = async(qid) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_numerical_question/?id=${qid}`, {
+        const response = await fetch(`${api_path}api/get_numerical_question/?id=${qid}`, {
             method:'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -596,7 +598,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const get_mcq_answer = async(qid) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_mcq_answer/?id=${qid}`, {
+        const response = await fetch(`${api_path}api/get_mcq_answer/?id=${qid}`, {
             method:'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -608,7 +610,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const get_result_test_cases = async(id) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_result_test_cases/?id=${id}`, {
+        const response = await fetch(`${api_path}api/get_result_test_cases/?id=${id}`, {
             method:'GET',
             headers: {
                 'Content-Type':'application/json',
@@ -620,7 +622,7 @@ export const AuthProvider = ({children}) => {
         return data
     }
     const get_questions_with_answers = async(id) => {
-        const response = await fetch(`http://127.0.0.1:8000/api/get_questions_with_answers/?id=${id}`, {
+        const response = await fetch(`${api_path}api/get_questions_with_answers/?id=${id}`, {
             method:'GET',
             headers:{
                 'Content-Type':'application/json',
@@ -693,6 +695,7 @@ export const AuthProvider = ({children}) => {
         get_numerical_question,
         get_result_test_cases,
         get_questions_with_answers,
+        api_path,
     }
     return (
         <AuthContext.Provider value = {contextData}>

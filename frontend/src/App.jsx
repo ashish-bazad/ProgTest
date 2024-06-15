@@ -16,7 +16,7 @@ function App() {
 
   return (
     <AuthProvider>
-    <Router>
+    <Router basename='/cso-testing'>
         <Routes>
             <Route exact path = '/' element = {<Landingpage />} />
             <Route exact path='/upcoming' element={<Upcoming />} />

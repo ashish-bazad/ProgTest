@@ -3,16 +3,19 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ashish-bazad.github.io/cso-testing",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "html-react-parser": "^5.1.10",
     "i": "^0.3.7",
     "jodit-react": "^4.0.15",
