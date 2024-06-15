@@ -1,0 +1,115 @@
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.questionContainer {
+    background-color: #cecece;
+    border-radius: 20px;
+    width: 70%;
+    padding: 30px 20px 30px 20px;
+}
+.whole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #cecece;
+    border-radius: 20px;
+    padding: 30px 40px 30px 40px;
+   
+}
+.each{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.marks{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.addwhole{
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.addtestcase{
+    display: flex;
+    flex-direction: column;
+    width: 57vw;
+    text-align: center;
+    margin-top: 35px;
+}
+.testcaseinout{
+    display: flex;
+    justify-content: space-evenly;
+}
+.tot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 12px 0;
+    background-color: #cecece;
+    border-radius: 20px;
+    padding: 30px 200px 30px 200px;
+}
+.testCasesDisplayDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.testCasesButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.overall{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+}
+.both{
+display: flex;
+flex-direction: column;
+}
+
+.edit_test_case_popup_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100%;
+}
+.edit_test_case_popup {
+    padding: 20px 30px 20px 30px;
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 1px solid black;
+}

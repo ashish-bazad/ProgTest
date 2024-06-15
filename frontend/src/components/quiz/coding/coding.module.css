@@ -1,0 +1,107 @@
+.codingQuestions {
+    margin: 0;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+}
+.codingQuestionText {
+    max-width: 1000px;
+    width: 90%;
+    background-color: #cecece;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+.codingSelect {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    width: 600px;
+    gap: 10px;
+    align-items: center;
+}
+.codingSelect div {
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+    transition: all 0.1s;
+}
+.codingSelect div:hover {
+    background-color: rgb(176, 216, 230);
+    cursor: pointer;
+}
+.codingSelector {
+    max-width: 200px;
+    width: 100%;
+}
+.codeTestCases {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.codingDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 86vh;
+    border-radius: 20px;
+    /* background-color: black; */
+    width: 100%;
+    margin: 0;
+    padding-top: 20px;
+}
+
+.codingLeft {
+    width: 45%;
+    margin: 0;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 30px 20px 30px;
+}
+
+.codingRight {
+    overflow-y: scroll;
+    width: 45%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px 30px 20px 30px;
+}
+.QuestionSelector {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+  }
+p strong {
+    font-size: 20px;
+}

@@ -1,0 +1,63 @@
+.teacherFormContainer {
+    /* max-width: 1200px;
+    width: 100%; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    margin: 0;
+}
+
+.teacherForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.teacherForm label {
+    display: flex;
+    gap: 20px;
+    width: 390px;
+    justify-content: space-between;
+}
+.teacherForm button {
+    max-width: 100px;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 180px;
+    width: 100%;
+    padding-top: 25px;
+}
+.teacherAllQuizTiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center;
+    gap: 30px; */
+    padding-bottom: 50px;
+    height: 80vh;
+    overflow-y: scroll;
+}
+.quizTiles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+.quizTilesButtons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.bsbm{
+    display: flex;
+    justify-content: center;
+    margin: 16px;
+}

@@ -1,0 +1,76 @@
+.AddRollNumber {
+    z-index: 1000;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.RollNumberDiv {
+    width: 40%;
+    height: 40%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.RollNumberDiv p {
+    font-size: 20px;
+    color:red;
+}
+.RollNumberDiv label {
+    display: flex;
+    gap: 20px;
+}
+.container {
+    position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Other styles for your container */
+    /* background-image: url('../../assets/wel.svg'); */
+    background-color: #ffffff;
+    background-image: url("https://img.freepik.com/free-photo/elevated-view-laptop-stationeries-blue-backdrop_23-2147880457.jpg?t=st=1713882085~exp=1713885685~hmac=b9b635b3005086aa51f2e34ef60645ad5b1e543d28ea1ef6359f3bf2eccb22bb&w=1550");
+    /* Adjust background size, position, and other properties as needed */
+    
+    background-position: center; /* Center the background image */
+}
+
+.CourseDetails{
+    margin-bottom: 30px;
+}
+.ProffDetails{
+    margin-bottom: 20px;
+}
+
+.welcomeText {
+    font-size: 48px; /* Adjust the font size as desired */
+  }
+/* landingpage.module.css */
+
+.HomePage{
+    text-align : center;
+    font: optional;
+}
+.relative{
+    position: absolute;
+    left: 28vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

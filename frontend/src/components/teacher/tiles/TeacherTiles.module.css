@@ -1,0 +1,33 @@
+.teacherTile {
+    max-width: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    border-radius: 20px;
+    background-color: #ADD8E6;
+    margin: 0;
+}
+.teacherTileContainer {
+    height: 100%;
+    padding: 20px 0px 20px 0px;
+    margin: 0;
+    max-width: 400px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.teacherTileContainer a {
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    font-size: 26px;
+    width: fit-content;
+}
+.teacherTileContainer p {
+    margin: 0;
+    font-size: 14px;
+}

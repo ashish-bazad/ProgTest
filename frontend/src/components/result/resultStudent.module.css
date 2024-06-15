@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 25px;
+}
+.resultBodyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    margin-top: 50px;
+    width: 100%;
+}
+.resultbody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1440px;
+    width: 800px;
+    margin: 0;
+}
+
+.QuestionsResultDiv {
+    background-color: #cecece;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+}
+.testCasesDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.testCaseDiv {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* background-color: #cecece; */
+    /* border-radius: 20px; */
+    padding: 20px 30px 10px 30px;
+}
+.testCaseEditordiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+.codingTestCasesDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #cecece;
+    border-radius: 20px;
+    /* gap: 20px; */
+    padding: 20px 10px 20px 10px;
+}
+.codingTestCasesDiv p {
+    margin: 0;
+}
+
+.codingQuestionSelector {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.codingQuestionSelector select {
+    height: 30px;
+    width: 300px;
+}

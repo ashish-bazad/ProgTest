@@ -1,0 +1,89 @@
+.codingQuestionForm {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.codingQuestionForm button {
+    max-width: 200px;
+}
+.exinout{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.main{
+    display: flex;
+    flex-direction: column; 
+}
+.textedit{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.codingQuestionsDiv{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 17px;
+width: 100%;
+
+}
+
+.codingQuestionTextDiv{
+margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #cecece;
+    width: 30%;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+    gap: 10px;
+    color: black;
+}
+.codingQuestionTextDiv a {
+    color: black;
+    text-decoration: none;
+}
+
+.edit_question_popup_container {
+    height: 100%;
+    width: 100%;
+    -webkit-backdrop-filter: blur(10px); /* Safari */
+    backdrop-filter: blur(10px);
+    z-index: 500;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.edit_question_popup {
+    width: 80%;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.codingQuestionsDisplayDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+}

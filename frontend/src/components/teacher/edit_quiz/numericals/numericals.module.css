@@ -1,0 +1,61 @@
+.numericalsForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.numericalsForm button {
+    max-width: 200px;
+}
+.whole{
+display: flex;
+margin-bottom:30px;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.displayint{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 70%;
+margin-top: 40px;
+
+}
+.ind{
+    width: 58vw;
+    padding: 0 43px 0 0px;
+}
+.numericalQuestionsDiv {
+    width: 100%;
+}
+.numericalQuestionTextDiv{
+    margin: 28px 0 32px 0;
+    background-color: #cecece;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 30px 20px 30px;
+}
+
+.edit_numerical_question_popup_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    z-index: 500;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.edit_numerical_question_popup {
+    width: 80%;
+    height: 70vh;
+    border-radius: 20px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px 30px 20px 30px;
+    
+}
