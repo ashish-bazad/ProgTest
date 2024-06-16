@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load allauth %}
+{% block content %}
+    {% element form method="post" no_visible_fields=False %}
+        {% slot actions %}
+            {% csrf_token %}
+            {% element button type="submit" id="continue-button" %}
+                {% trans "Continue" %}
+            {% endelement %}
+        {% endslot %}
+    {% endelement %}
+{% endblock content %}
+
+<style>
+    #continue-button {
+        display: none;
+    }
+</style>
+
+<script>
+    window.onload = function() {
+        document.getElementById('continue-button').click();
+    };
+</script>
